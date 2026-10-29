@@ -63,8 +63,8 @@ def handle_next_turn():
         
         emit('state_update', game_state, broadcast=True)
 
-if __name__ == '__main__':
-    allow_unsafe_werkzeug=True
+if __name__ == '__main__':socketio.run(app, debug=True,
+    allow_unsafe_werkzeug=True)
                  
     
 @socketio.on('send_answer')
